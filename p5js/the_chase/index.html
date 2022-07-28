@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+		<title>Nick Fox-Gieg - The Chase</title>
+    	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    	<!--<meta property="og:image" content="thumbnail.gif">-->
+		<link rel="stylesheet" href="style.css">
+		<script src="p5.min.js"></script>
+	</head>
+
+	<body>
+		<script>
+			"use strict";
+
+			const sW = 800;
+			const sH = 800;
+			const fps = 60;
+
+			let pg;
+
+			function setup() {
+			    createCanvas(windowHeight, windowHeight);
+			    pg = createGraphics(sW, sH, WEBGL);
+			    
+			    pixelDensity(1);	
+			    noCursor();
+			    frameRate(fps);
+			}
+
+			function draw() {
+				pg.clear();
+				
+			    image(pg, 0, 0, width, height);			
+			}
+		</script>
+	</body>
+
+</html>
